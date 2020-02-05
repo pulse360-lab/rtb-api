@@ -1,0 +1,19 @@
+{
+  "name": "rtb-api",
+  "version": "1.0.0",
+  "description": "Realtime bus API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pulse360-lab/rtb-api.git"
+  },
+  "author": "Alexandre Yembo Leite",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pulse360-lab/rtb-api/issues"
+  },
+  "homepage": "https://github.com/pulse360-lab/rtb-api#readme"
+}

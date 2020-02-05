@@ -1,0 +1,23 @@
+{	
+	"authorizationToken" : "${RTB_BOT_TOKEN}",
+	"cacheExpireTime": "3200",
+	"config" : {
+		"adminUsers" : [1,2,3],
+		"customCommands" : [
+			{ 
+				"stop" : ["my command 1"],
+				"executeWithSpawn" : true
+			},
+			{
+				"testing" : "echo 'not executing with spawn'"
+			}
+		],
+		"deniedCommands" : ["rm", "rmdir", "shutdown", "halt", "sudo", "mv", "touch", "chmod", "wget", "curl", "echo"]
+	},
+	"apis":{
+		"geoLocalization": {
+			"url" : "https://eu1.locationiq.com/v1",
+			"token": "${TOKEN_LOCALIZATION}"
+		}
+	}
+}
