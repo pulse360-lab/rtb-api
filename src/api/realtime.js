@@ -1,5 +1,5 @@
 const getInfo = async (req, res) => {
-    //TODO: let location = await global.redis.get(`user-location:${req.query.userid}`);
+     let location = await global.redis.get(`user-location:${req.query.userid}`);
      let apiFactory = require('../api-clients/api-factory');
      let api = apiFactory.getInstance(location.city);
      try {
