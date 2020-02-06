@@ -1,5 +1,4 @@
 const fetch = require("node-fetch");
-const url = "https://jsonplaceholder.typicode.com/posts/1";
 
 const get = async url => {
   try {
