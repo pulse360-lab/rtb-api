@@ -14,9 +14,8 @@ class dublinApi extends apiBase{
                                 : require('./responses/stop-information').mapObjectResult(result);
     }
 
-    async getRealTimeInformation(routeId, param){
-        let objParameter = JSON.parse(param);
-        let result = await this.httpClient.get(`${ this.baseUrl }realtimebusinformation?stopid=${objParameter.stopId}&routeid=${routeId}&operator=${objParameter.operator}`);
+    async getRealTimeInformation(param){
+        let result = await this.httpClient.get(`${ this.baseUrl }realtimebusinformation?stopid=${param.stopId}&routeid=${param.routeId}&operator=${param.operator}`);
 
         return result.errorcode === "1" 
                                 ? {error: {message: result.errormessage}} 

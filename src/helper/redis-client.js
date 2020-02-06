@@ -3,7 +3,9 @@ const redis = require('redis'),
 
 bluebird.promisifyAll(redis.RedisClient.prototype);
 bluebird.promisifyAll(redis.Multi.prototype);
+
 var client;
+
 const createClient = () => client = redis.createClient();
 
 const get = async(key) => {
