@@ -1,14 +1,17 @@
+const { getLocation } = require('../helper/location-cache');
+const apiReponse = require('../helper/api-response');
+
+
 const getInfo = async (req, res) => {
-     let location = await global.redis.get(`user-location:${req.query.userid}`);
-     let apiFactory = require('../api-clients/api-factory');
-     let api = apiFactory.getInstance(location.city);
-     try {
-         let result = await api.getRealTimeInformation({ stopId: req.query.stopId, routeId: req.query.routeId, operator: req.query.operator });
-         res.json(result);
-     } catch(error){
-         res.json({msgError: 'Service unavailable for your current location'});
-     }
-   
+    let location = await getLocation(req.query.userid);
+    let result = await apiReponse.exec(location, async (api) => await api.getRealTimeInformation({ stopId: req.query.stopId, routeId: req.query.routeId, operator: req.query.operator }));
+    res.json(result);
  }
  
- module.exports = { getInfo };
+ const getByStop = async(req, res) => {
+    let location = await getLocation(req.query.userid);
+    let result = await apiReponse.exec(location, async (api) => await api.getStopInformation(req.query.stopNumber));
+    res.json(result);
+ }
+
+ module.exports = { getInfo, getByStop };
