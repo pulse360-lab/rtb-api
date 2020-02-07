@@ -1,19 +1,17 @@
-const redisClient = require('../helper/redis-client');
+const { getLocation } = require('../helper/location-cache');
+const apiReponse = require('../helper/api-response');
 
-// let location = await this.redis.get(`user-location:${param.from.id}`);
-//         let apiFactory = require('../api-clients/api-factory');
-//         let api = apiFactory.getInstance(location.city);
-                        
-//         let result = await api.getRealTimeInformation(param.routeId, param.parameters);
 
 const getInfo = async (req, res) => {
-    redisClient.createClient();
-    let location = await this.redis.get(`user-location:${req.query.userid}`);
-    let apiFactory = require('../api-clients/api-factory');
-    let api = apiFactory.getInstance(location.city);
-                        
-    let result = await api.getRealTimeInformation(param.routeId, param.parameters);
-    res.json({id: 123});
-}
+    let location = await getLocation(req.query.userid);
+    let result = await apiReponse.exec(location, async (api) => await api.getRealTimeInformation({ stopId: req.query.stopId, routeId: req.query.routeId, operator: req.query.operator }));
+    res.json(result);
+ }
+ 
+ const getByStop = async(req, res) => {
+    let location = await getLocation(req.query.userid);
+    let result = await apiReponse.exec(location, async (api) => await api.getStopInformation(req.query.stopNumber));
+    res.json(result);
+ }
 
-module.exports = { getInfo };
+ module.exports = { getInfo, getByStop };

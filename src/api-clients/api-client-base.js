@@ -1,7 +1,7 @@
 class apiClientBase{
     constructor(client){
         this.client = client;
-        this.httpClient = require('../../../rtb-telegram-bot/helper/http-client');
+        this.httpClient = require('../helper/http-fetch');
     }
     setBaseUri(url){
         this.baseUrl = url;
@@ -11,7 +11,7 @@ class apiClientBase{
         return null;   
     }
 
-    getRealTimeInformation(routeId, param){
+    getRealTimeInformation(param){
         return null;
     }
 
