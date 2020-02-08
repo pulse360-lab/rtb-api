@@ -2,8 +2,8 @@
 	"cacheExpireTime": "3200",
 	"apis":{
 			"geoLocation": {
-				"url" : "https://eu1.locationiq.com/v1",
-				"token": "${TOKEN_LOCALIZATION}"
+			   "url" : "https://eu1.locationiq.com/v1",
+			   "token": "${TOKEN_LOCALIZATION}"
 		}
 	}
 }

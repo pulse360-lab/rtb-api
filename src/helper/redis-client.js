@@ -3,9 +3,7 @@ const redis = require('redis'),
 
 bluebird.promisifyAll(redis.RedisClient.prototype);
 bluebird.promisifyAll(redis.Multi.prototype);
-
 var client;
-
 const createClient = () => client = redis.createClient();
 
 const get = async(key) => {
@@ -14,8 +12,8 @@ const get = async(key) => {
 };
 
 const save = async(key, obj) => {
-    var seconds = require('../config.json').cacheExpireTime;
-    return await client.setex(key, seconds, JSON.stringify(obj));
+  //  var seconds = require('../../config.json').cacheExpireTime;
+    return await client.setex(key, 3200, JSON.stringify(obj));
 }
 
 module.exports = {createClient, get, save};

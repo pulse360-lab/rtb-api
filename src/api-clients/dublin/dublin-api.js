@@ -1,4 +1,5 @@
 const apiBase = require('../api-client-base');
+const routes = require('./route-list.json');
 
 class dublinApi extends apiBase{
     constructor(){
@@ -6,8 +7,8 @@ class dublinApi extends apiBase{
         super.setBaseUri("https://data.smartdublin.ie/cgi-bin/rtpi/");
     }
 
-    async getStopInformation(id){
-        let result = await this.httpClient.get(`${ this.baseUrl }busstopinformation?stopid=${id}&format=json`);
+    async getStopInformation(param){
+        let result = await this.httpClient.get(`${ this.baseUrl }busstopinformation?stopid=${param.stopNumber}&format=json`);
 
         return result.errorcode === "1" 
                                 ? {error: {message: result.errormessage}} 
@@ -15,7 +16,7 @@ class dublinApi extends apiBase{
     }
 
     async getRealTimeInformation(param){
-        let result = await this.httpClient.get(`${ this.baseUrl }realtimebusinformation?stopid=${param.stopId}&routeid=${param.routeId}&operator=${param.operator}`);
+        let result = await this.httpClient.get(`${ this.baseUrl }realtimebusinformation?stopid=${param.stopNumber}&routeid=${param.routeId}&operator=${param.operator}`);
 
         return result.errorcode === "1" 
                                 ? {error: {message: result.errormessage}} 
@@ -23,10 +24,10 @@ class dublinApi extends apiBase{
     }
 
     getStopsNearMe(param){
-        var result = require('../../../../rtb-telegram-bot/helper/geo-location').get(param.latitude, param.longitude, 0.3);
         var stops = [];
+
         require('./route-list.json.js').forEach(f => {
-            if(f.latitude >= result.minLat && f.latitude <= result.maxLat && f.longitude >= result.minLon && f.longitude <= result.maxLon)
+            if(f.latitude >= locationRange.minLat && f.latitude <= locationRange.maxLat && f.longitude >= locationRange.minLon && f.longitude <= locationRange.maxLon)
                 stops.push({stopId: f.stopid, name: f.fullname});
         });
         return stops;

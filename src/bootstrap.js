@@ -1,6 +1,7 @@
 const redisClient = require('./helper/redis-client')
 module.exports = {
   init() {
-    global.redis = redisClient.createClient();
+      redisClient.createClient();
+      global.redis = redisClient;
   }
 }
