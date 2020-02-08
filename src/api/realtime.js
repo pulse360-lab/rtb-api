@@ -3,7 +3,7 @@ const apiHelper = require('../helper/api');
 var geoLocation = require('../helper/geo-location');
 
 const getInfo = async(req, res) => {
-    let location = await getLocation(req.query.userid);
+    let location = await getLocation(req.query.userId);
     let result = await apiHelper(location, async (api) => 
                                        await api.getRealTimeInformation({
                                            stopNumber: req.query.stopNumber, 
@@ -14,7 +14,7 @@ const getInfo = async(req, res) => {
  }
  
  const getByStop = async(req, res) => {
-    let location = await getLocation(req.query.userid);
+    let location = await getLocation(req.query.userId);
     let result = await apiHelper(location, async (api) => 
                                        await api.getStopInformation({
                                           stopNumber: req.query.stopNumber
@@ -23,7 +23,7 @@ const getInfo = async(req, res) => {
  }
 
  const getStopsNear = async(req, res) => {
-   let location = await getLocation(req.query.userid);
+   let location = await getLocation(req.query.userId);
    let locationRange = geoLocation.get(param.latitude, param.longitude, 0.3);
    let result = await apiHelper(location, async (api) => 
                                        await api.getStopsNearMe({
