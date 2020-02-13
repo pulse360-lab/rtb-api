@@ -1,9 +1,9 @@
-[![CircleCI](https://circleci.com/gh/pulse360-lab/rtb-telegram-bot/tree/develop.svg?style=svg)](https://circleci.com/gh/pulse360-lab/rtb-telegram-bot/tree/develop)
-[![Build Status](https://travis-ci.org/pulse360-lab/rtb-telegram-bot.svg?branch=develop)](https://travis-ci.org/pulse360-lab/rtb-telegram-bot)
-![GitHub contributors](https://img.shields.io/github/contributors/realtime-bus/node-telegram-bot.svg)
-![App Version](https://img.shields.io/badge/dynamic/json?color=orange&label=realtime-bus&prefix=v&query=version&suffix=beta&url=https%3A%2F%2Fraw.githubusercontent.com%2Fpulse360-lab%2Frtb-telegram-bot%2Fdevelop%2Fpackage.json)
+[![CircleCI](https://circleci.com/gh/pulse360-lab/rtb-api/tree/develop.svg?style=svg)](https://circleci.com/gh/pulse360-lab/rtb-api/tree/develop)
+[![Build Status](https://travis-ci.org/pulse360-lab/rtb-api.svg?branch=develop)](https://travis-ci.org/pulse360-lab/rtb-api)
+![GitHub contributors](https://img.shields.io/github/contributors/realtime-bus/node-api.svg)
+![App Version](https://img.shields.io/badge/dynamic/json?color=orange&label=realtime-bus&prefix=v&query=version&suffix=beta&url=https%3A%2F%2Fraw.githubusercontent.com%2Fpulse360-lab%2Frtb-api%2Fdevelop%2Fpackage.json)
 
-[![Edit with Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/pulse360-lab/rtb-telegram-bot)
+[![Edit with Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/pulse360-lab/rtb-api)
 
 # realtime-bus-api 
 An API project for You! To help ya! get urban public transport information around  
