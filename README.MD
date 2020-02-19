@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/pulse360-lab/rtb-api/tree/master.svg?style=svg](https://circleci.com/gh/pulse360-lab/rtb-api/tree/master)
+[![CircleCI](https://circleci.com/gh/pulse360-lab/rtb-api/tree/master.svg?style=svg)](https://circleci.com/gh/pulse360-lab/rtb-api/tree/master)
 [![Build Status](https://travis-ci.org/pulse360-lab/rtb-api.svg?branch=develop)](https://travis-ci.org/pulse360-lab/rtb-api)
 ![GitHub contributors](https://img.shields.io/github/contributors/realtime-bus/node-api.svg)
 ![App Version](https://img.shields.io/badge/dynamic/json?color=orange&label=realtime-bus&prefix=v&query=version&suffix=beta&url=https%3A%2F%2Fraw.githubusercontent.com%2Fpulse360-lab%2Frtb-api%2Fdevelop%2Fpackage.json)
