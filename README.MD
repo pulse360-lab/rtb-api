@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/pulse360-lab/rtb-api/tree/develop.svg?style=svg)](https://circleci.com/gh/pulse360-lab/rtb-api/tree/develop)
+[![CircleCI](https://circleci.com/gh/pulse360-lab/rtb-api/tree/master.svg?style=svg](https://circleci.com/gh/pulse360-lab/rtb-api/tree/master)
 [![Build Status](https://travis-ci.org/pulse360-lab/rtb-api.svg?branch=develop)](https://travis-ci.org/pulse360-lab/rtb-api)
 ![GitHub contributors](https://img.shields.io/github/contributors/realtime-bus/node-api.svg)
 ![App Version](https://img.shields.io/badge/dynamic/json?color=orange&label=realtime-bus&prefix=v&query=version&suffix=beta&url=https%3A%2F%2Fraw.githubusercontent.com%2Fpulse360-lab%2Frtb-api%2Fdevelop%2Fpackage.json)
@@ -6,23 +6,23 @@
 [![Edit with Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/pulse360-lab/rtb-api)
 
 # realtime-bus-api 
-An API project for You! To help ya! get urban public transport information around  
+this API is a kind of Gateway that match the proper API by passing parameters such GeoLocation. It returns information for all API supported and developed by now.
 * Buses Delay  
 * Routes  
 * And more...  
 
 ## Built with  
 NodeJs https://nodejs.org/en/docs/  
-Telegram Bot API https://core.telegram.org/api
 
 ## APIs  
 https://eu1.locationiq.com  
-https://core.telegram.org/api
+
+### APIs Transport support by now:
+- [x] Dublin API
 
 ## Development Plans  
-We plan to have this project as a service as:  
-- [x] Telegram Bot ![ongoing](https://img.shields.io/badge/on-going-yellowgreen)
-- [ ] iOS / Android App ![nextsteps](https://img.shields.io/badge/next-steps-lightgrey)
+- [ ] London API - Next developement
+- [ ] Sao Paulo API - Next developement
 
 ## CI & CD Flow  
 [todo]  
@@ -30,20 +30,18 @@ We plan to have this project as a service as:
 ## Try it yourself  
 ### Dependencies  
 * docker  
-* telegram bot token https://core.telegram.org/bots  
-
 ### Step #1  
 ```
-docker run -d -e RTB_BOT_TOKEN=<YOUR_BOT_TOKEN> realtimebus-bot:develop
+docker run -d -e RTB_API_TOKEN=<YOUR_BOT_TOKEN> realtimebus-api:develop
 ```  
 
 ### Step #2  
 ```
-Open Telegram and chat with your created bot sending this command /start
+Access using http://localhost:3000/api/v1
 ```  
 ### Step #3  
 ```
-There is no step 3 ;) Bot is up and running for test
+There is no step 3 ;) API is up and running for test
 ```  
 
 ## Contributing  
