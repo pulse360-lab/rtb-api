@@ -23,10 +23,10 @@ class dublinApi extends apiBase{
                                 : require('./responses/realtime-information').mapObjectResult(result);
     }
 
-    getStopsNearMe(param){
+    getStopsNearMe(locationRange){
         var stops = [];
 
-        require('./route-list.json.js').forEach(f => {
+        require('./route-list.json').forEach(f => {
             if(f.latitude >= locationRange.minLat && f.latitude <= locationRange.maxLat && f.longitude >= locationRange.minLon && f.longitude <= locationRange.maxLon)
                 stops.push({stopId: f.stopid, name: f.fullname});
         });

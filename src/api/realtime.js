@@ -24,13 +24,9 @@ const getInfo = async(req, res) => {
 
  const getStopsNear = async(req, res) => {
    let location = await getLocation(req.query.userId);
-   let locationRange = geoLocation.get(param.latitude, param.longitude, 0.3);
-   let result = await apiHelper(location, async (api) => 
-                                       await api.getStopsNearMe({
-                                          latitude: location.latitude, 
-                                          longitude: location.longitude,
-                                          locationRange: locationRange
-                                       }));
+   let locationRange = geoLocation.get(location.latitude, location.longitude, 0.3);
+   let result = await apiHelper(location, (api) => 
+                                          api.getStopsNearMe(locationRange));
    res.json(result);
  }
 
