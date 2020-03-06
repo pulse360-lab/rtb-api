@@ -47,5 +47,4 @@ There is no step 3 ;) API is up and running for test
 ## Contributing  
 [todo]  
 
-
-![Release Notes](https://github.com/pulse360-lab/rtb-api/blob/master/RELEASE.md)
+[Release Notes](https://github.com/pulse360-lab/rtb-api/blob/master/RELEASE.md)
