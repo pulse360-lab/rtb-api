@@ -48,3 +48,4 @@ There is no step 3 ;) API is up and running for test
 [todo]  
 
 
+![Release Notes](https://github.com/pulse360-lab/rtb-api/blob/master/RELEASE.md)
