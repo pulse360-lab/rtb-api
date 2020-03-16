@@ -4,6 +4,10 @@
 			"geoLocation": {
 			   "url" : "https://eu1.locationiq.com/v1",
 			   "token": "${TOKEN_LOCALIZATION}"
-		}
+			},
+			"dublin":{
+				"key": "Dublin",
+				"url": "https://data.smartdublin.ie/cgi-bin/rtpi/"
+			}
 	}
 }
