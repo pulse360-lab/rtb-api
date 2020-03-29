@@ -1,5 +1,5 @@
 # Release Notes
-### 2020.03.06
+### version: 1.0.2020.03.06
   - API project final release includes support to Dublin Transport Service.
   - Allow you to find stops near you.
   - Allow you to update your current Location.
