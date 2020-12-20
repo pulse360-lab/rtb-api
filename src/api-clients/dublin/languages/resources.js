@@ -1,5 +1,5 @@
 const getResource = (language) => {
-    const fileJson = require(`./${language ? language : 'en_US'}.json`);
+    const fileJson = require(`./${language ? language : 'en'}.json`);
     return fileJson.response;
 }
 

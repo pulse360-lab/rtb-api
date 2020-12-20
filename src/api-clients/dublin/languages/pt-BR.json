@@ -1,0 +1,9 @@
+{
+    "response" : {
+        "error_message": "Infelizmente o servico na esta disponivel no momento. Por favor, tente mais tarde.",
+        "error_operator_name": "Operador nao encontrado",
+        "errorCode" : {
+            "1": "Nenhum resultado"
+        }
+    }
+}
